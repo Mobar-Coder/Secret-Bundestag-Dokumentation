@@ -1,0 +1,7 @@
+All messages are in JSON format and the first field is messageType
+
+join/create lobby
+
+messageType: "signup"
+name: (string)
+lobby: (string) (the lobby field is empty if the user requests to create a new lobby)
