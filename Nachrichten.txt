@@ -1,7 +1,24 @@
 All messages are in JSON format and the first field is messageType
 
+Client to Server:
+
 join/create lobby
 
 messageType: "signup"
 name: (string)
 lobby: (string) (the lobby field is empty if the user requests to create a new lobby)
+
+Server to Client:
+
+start game
+
+messageType: "gameStart"
+fraction: (string)
+role: (string)
+hitler: (string) (for non-hitler fascists)
+teammates: (array<string>) (for non-hitler fascists)
+
+decisions
+
+messageType: "decision"
+choices: (array<string>)
