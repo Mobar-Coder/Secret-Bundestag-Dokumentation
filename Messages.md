@@ -76,12 +76,11 @@ Snapshot for clients
         "liberalPolicies": int,
         "fascistPolicies": int,
         "chancellor": string, // can be null
-        "president": string,
-        "pastOffice": string, // can be null
         "electionTracker": int,
         "players" [{
             "name": string,
             "alive": bool
+            "govRole": string //one of "President, Chancellor, Candidate or null"
         }],
         "cardPile": int,
         "discardPile": int
