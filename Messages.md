@@ -51,7 +51,11 @@ Generic decision to a server request. Example: Server requests player to choose 
     "body": {
         "fraction": string,
         "role": string,
-        "player": string,
+        "players" [{
+            "name": string,
+            "alive": bool
+            "govRole": string //one of "President, Chancellor, Candidate or null"
+        }],
         "hitler": string // (null for liberal players or hitler)
         "teamMates": [string] // (null for liberal players or hitler)
     }
@@ -82,7 +86,6 @@ Snapshot for clients
     "body": {
         "liberalPolicies": int,
         "fascistPolicies": int,
-        "chancellor": string, // can be null
         "electionTracker": int,
         "players" [{
             "name": string,
