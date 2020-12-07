@@ -1,11 +1,11 @@
 # Message standard
-
+This is Version 1 of the message standard.
 All messages are in JSON format.  Every message has the following header:
 ```js
 {
     "name": string, //the name of the message type
     "timestamp": string,
-    "version": string,
+    "version": 1,
     "body": {
         ...
     }
