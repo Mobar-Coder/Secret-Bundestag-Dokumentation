@@ -1,43 +1,56 @@
+# Message standard
+
 All messages are in JSON format and the first field is messageType
 
-Client to Server:
+## Client to Server:
 
-join/create lobby
+### join/create lobby
 
+```
 messageType: "signup"
 name: (string)
 lobby: (string) (the lobby field is empty if the user requests to create a new lobby)
+```
 
-reply to decision
+### reply to decision
+```
 messageType: "reply"
 choice: (string)
+```
 
-Server to Client:
+## Server to Client:
 
-start game
+### start game
 
+```
 messageType: "gameStart"
 fraction: (string)
 role: (string)
 players: (array<string>)
 hitler: (string) (for non-hitler fascists)
 teammates: (array<string>) (for non-hitler fascists)
+```
 
-decisions
+### decisions
 
+```
 messageType: "decision"
 choices: (array<string>)
+```
 
-game state
+### game state
 
+```
 messageType: "gameState"
 liberalPolicies: (int)
 fascistPolicies: (int)
 chancellor: (string)
 candidate: (string)
 president: (string)
+```
 
-end of game
-
+### end of game
+```
 messageType: "gameEnd"
 winners: (array<string>)
+```
