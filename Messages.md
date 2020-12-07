@@ -1,6 +1,17 @@
 # Message standard
 
-All messages are in JSON format and the first field is the message type
+All messages are in JSON format.  Every message has the following header:
+```js
+{
+    "name": string, //the name of the message type
+    "timestamp": string,
+    "version": string,
+    "body": {
+        ...
+    }
+}
+```
+The timestamp is according to ISO8601.
 
 ## Client to Server:
 
