@@ -96,6 +96,7 @@ Snapshot for clients
 ```
 
 ### end of game
+
 ```js
 {
     "name": "gameEnd",
