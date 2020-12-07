@@ -73,6 +73,7 @@ Server asks client to pick an option. Example: Type: Pick a card, choices: liber
 ```
 
 ### game state
+
 Snapshot for clients
 ```js
 {
