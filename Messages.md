@@ -17,6 +17,7 @@ The timestamp is according to ISO8601. All following message definitions contain
 
 ### join/create lobby
 If the lobby name does not exist on the server, a new one is created.
+
 ```js
 {
     "name": "join",
