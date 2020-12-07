@@ -13,6 +13,7 @@ If the lobby name does not exist on the server, a new one is created.
         "name": string,
         "lobby": string
     }
+}
 ```
 
 ### reply to decision
@@ -44,11 +45,12 @@ Generic decision to a server request. Example: Server requests player to choose 
 ```
 
 ### decisions
-Server asks client to pick an option
+Server asks client to pick an option. Example: Type: Pick a card, choices: liberal, fascist.
 ```js
 {
     "name": "requestDecision",
     "body": {
+        "type": string
         "choices": [string]
     }
 }
