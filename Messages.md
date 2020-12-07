@@ -30,6 +30,7 @@ If the lobby name does not exist on the server, a new one is created.
 ```
 
 ### reply to decision
+
 Generic decision to a server request. Example: Server requests player to choose a card to play.
 ```js
 {
