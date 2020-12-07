@@ -11,7 +11,7 @@ All messages are in JSON format.  Every message has the following header:
     }
 }
 ```
-The timestamp is according to ISO8601.
+The timestamp is according to ISO8601. All following message definitions contain this message header even though it is not explicitly specified.
 
 ## Client to Server:
 
