@@ -40,6 +40,17 @@ Generic decision to a server request. Example: Server requests player to choose 
 
 ## Server to Client:
 
+### accept connection
+
+```js
+{
+    "name": "Accept",
+    "body": {
+        
+    }
+}
+```
+
 ### start game
 
 ```js
