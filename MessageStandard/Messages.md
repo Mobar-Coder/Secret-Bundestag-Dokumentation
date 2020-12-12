@@ -44,7 +44,7 @@ Generic decision to a server request. Example: Server requests player to choose 
 
 ```js
 {
-    "name": "accept",
+    "name": "Accept",
     "body": {
         
     }
