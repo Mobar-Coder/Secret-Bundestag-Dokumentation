@@ -19,10 +19,19 @@ The timestamp is according to ISO8601. All following message definitions contain
 If the lobby name does not exist on the server, a new one is created.
 ```js
 {
-    "name": "join",
+    "name": "JoinRequest",
     "body": {
         "name": string,
         "lobby": string
+    }
+}
+```
+The player who creates a lobby is promoted to lobby leader and may send a StartRequest to ask the server to start the game.
+
+```js
+{
+    "name": "StartRequest",
+    "body": {
     }
 }
 ```
@@ -31,7 +40,7 @@ If the lobby name does not exist on the server, a new one is created.
 Generic decision to a server request. Example: Server requests player to choose a card to play.
 ```js
 {
-    "name": "genericReply",
+    "name": "GenericReply",
     "body": {
         "decision": string
     }
@@ -46,7 +55,7 @@ Generic decision to a server request. Example: Server requests player to choose 
 {
     "name": "Accept",
     "body": {
-        
+        "leader": bool
     }
 }
 ```
@@ -55,11 +64,15 @@ Generic decision to a server request. Example: Server requests player to choose 
 
 ```js
 {
-    "name": "gameStart",
+    "name": "GameStart",
     "body": {
         "fraction": string,
         "role": string,
-        "player": string,
+        "players" [{
+            "name": string,
+            "alive": bool
+            "govRole": string //one of "President, Chancellor, Candidate or null"
+        }],
         "hitler": string // (null for liberal players or hitler)
         "teamMates": [string] // (null for liberal players or hitler)
     }
@@ -70,7 +83,7 @@ Generic decision to a server request. Example: Server requests player to choose 
 Server asks client to pick an option. Example: Type: Pick a card, choices: liberal, fascist.
 ```js
 {
-    "name": "requestDecision",
+    "name": "RequestDecision",
     "body": {
         "type": string
         "choices": [string]
@@ -82,7 +95,7 @@ Server asks client to pick an option. Example: Type: Pick a card, choices: liber
 Snapshot for clients
 ```js
 {
-    "name": "gameState",
+    "name": "GameState",
     "body": {
         "liberalPolicies": int,
         "fascistPolicies": int,
@@ -102,7 +115,7 @@ Snapshot for clients
 ### end of game
 ```js
 {
-    "name": "gameEnd",
+    "name": "GameEnd",
     "body": {
         "winnerTeam": string
     }
