@@ -26,6 +26,15 @@ If the lobby name does not exist on the server, a new one is created.
     }
 }
 ```
+The player who creates a lobby is promoted to lobby leader and may send a StartRequest to ask the server to start the game.
+
+```js
+{
+    "name": "StartRequest",
+    "body": {
+    }
+}
+```
 
 ### reply to decision
 Generic decision to a server request. Example: Server requests player to choose a card to play.
@@ -46,7 +55,7 @@ Generic decision to a server request. Example: Server requests player to choose 
 {
     "name": "Accept",
     "body": {
-        
+        "leader": bool
     }
 }
 ```
