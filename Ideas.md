@@ -23,6 +23,7 @@
 # Wenn man aus dem Bundestag fliegt (equiv to exekutiert) kann man immer noch Lobbyist werden
 
 # Annonyme Wahlen?
+* als kaufbares Event (vom Haushalt) aufdecken, wer wie gewählt hat
 
 # Haushalt? Also in jeder Legislaturperiode kann Geld ausgegeben werden
 * Regierung pauschal Geld
@@ -30,6 +31,7 @@
 * Special Events kaufen (Policy Peek, Loyality, ...)
 * Kanzler wählt jemanden (Minister), der das Geld ausgibt
 * Indirekte policies, indem für Dinge Geld ausgegeben wird
+* neue Karten kaufen / entfernen?
 
 # Weg von dem zwei-Parteien-System?
 
